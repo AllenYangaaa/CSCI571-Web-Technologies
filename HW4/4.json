@@ -1,0 +1,71 @@
+{
+  "Mainline": {
+    "Table": {
+      "Header": {
+        "Data": [
+          "Parent Company",
+          "Subsidiary Portfolio / Services",
+          "HQ / Info",
+          "Annual Revenue ($ million)",
+          "HomePage",
+          "Logo"
+        ]
+      },
+      "Row": [
+          
+        {
+          "Company": "J.B. Hunt Transport Services",
+          "Services": "Truckload, Dedicated Contract Services, Integrated Capacity Solutions, Intermodal",
+          "Hubs": {
+            "Hub": [
+              "Lowell, Arkansas",
+              "Since 1961, J.B. Hunt Transport Services, Inc., has been a leader in the trucking industry. Hunt Transport was among the first companies to adopt the container trucking approach, in which containers went directly from ships and trains onto trucks."
+            ]
+          },
+          "Revenue": "$4,527",
+          "HomePage": "https://www.jbhunt.com/",
+          "Logo": "http://cs-server.usc.edu:45678/hw/hw4/jbhunt.jpg"
+        },  
+          
+          
+        {
+          "Company": "YRC Worldwide",
+          "Services": "YRC Freight, YRC Regional",
+          "Hubs": {
+            "Hub": [
+              "Overland Park, Kansas, USA",
+              "YRC Freight traces its origins to Yellow Transit Company, a bus and taxi company in Oklahoma City in 1924. Yellow Transit later merged with Roadway, the dominant trucking company in the U.S. for decades, and Reimer Express, the leading trucking company in Canada, to form Yellow Roadway Corporation, shortened to YRC Freight. "
+            ]
+          },
+          "Revenue": "$4,869",
+          "HomePage": "https://www.yrcw.com/",
+          "Logo": "http://cs-server.usc.edu:45678/hw/hw4/yrcw.png"
+        }, 
+          
+        {
+          "Company": "Con-way",
+          "Services": "Con-way Freight, Con-way Truckload",
+          "Hubs": {
+
+          },
+          "Revenue": "$3,729",
+          "HomePage": "http://www.con-way.com",
+          "Logo": "http://cs-server.usc.edu:45678/hw/hw4/con-way.png"
+        },  
+          
+        {
+          "Company": "Swift Transportation",
+          "Services": "Truckload, Dedicated, Intermodal",
+          "Hubs": {
+            "Hub": [
+            ]
+          },
+          "Revenue": "$3,334",
+          "HomePage": "http://www.swifttrans.com/",
+          "Logo": "http://cs-server.usc.edu:45678/hw/hw4/swift.png"
+        }        
+        
+      ]
+    }
+  }
+}

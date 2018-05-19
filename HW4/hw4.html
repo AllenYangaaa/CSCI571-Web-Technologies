@@ -1,0 +1,154 @@
+
+<html>
+    <!--Homework4 written by Boyuan Wang(boyuanwa).CSCI571.Spring 2018. -->
+<head>
+	<meta charset="UTF-8">
+	<title>HomeWork4</title>
+    <script type="text/javascript">
+    var jsonDoc;
+    var myJsonFile;
+    function loadJSON () {
+        var url = document.getElementById('input1').value;
+        //url = "truckinglist.json";
+        try{
+            var xmlhttp=new XMLHttpRequest();
+            xmlhttp.open("GET",url,false);
+            xmlhttp.send();
+
+            jsonDoc = xmlhttp.responseText;
+            if(xmlhttp.status == 404){
+                alert('No such JSON File!');
+                return 0;
+            }else if (url.length == 0){
+                alert('Do not let name empty!');
+                return 0;
+            }
+            return jsonDoc;
+        } catch(exception){
+            alert("Other Error!");
+            return 0;
+        }
+    }
+    function viewJSON(url){
+        jsonDoc = loadJSON();
+        if (jsonDoc != 0){
+            myJsonFile = JSON.parse(jsonDoc);
+            if(myJsonFile.Mainline.Table.Row == null || myJsonFile.Mainline.Table.Row.length == 0){
+                alert("No rows!(There are no companines to be displayed!)");
+                return 0;
+            }
+            newWindow = window.open("", "hw4", "height=800px,width=1200px,scrollbars=yes");
+            var htmlContent = mainMakeTable();
+            newWindow.document.write(htmlContent);
+            newWindow.document.close();
+        }
+    }
+    function mainMakeTable(){
+        var htmlContent = "";
+        //htmlContent += "<html><head><title>hw4</title></head><body>begin:<br><br>";
+        htmlContent += "<html><head><title>hw4</title></head><body><table border='2'><tr>";
+        for (firstLayer in myJsonFile) { 
+            //Mainline
+            for(secondLayer in myJsonFile[firstLayer]){
+                //htmlContent += "secondLayer : = " + secondLayer + "<br>";
+                //Table
+                var i = 0;
+                for(thirdLayer in myJsonFile[firstLayer][secondLayer]){
+                    //Header Row
+                    //htmlContent += "thirdLayer : = " + thirdLayer + "<br>";
+                    //htmlContent += i + ":" + thirdLayer + ":" +  + "\n";
+                    if(i == 0){
+                        for(x in myJsonFile[firstLayer][secondLayer][thirdLayer]){
+                            //x : Data
+                            var tableAttributes = myJsonFile[firstLayer][secondLayer][thirdLayer][x];
+                            for(y in tableAttributes){
+                                htmlContent +=  "<th>" + tableAttributes[y] + "</th>";
+                            }
+                            htmlContent += "</tr>";
+                        }
+                    } else {
+                        var nb_rows = 0;
+                        for(x in myJsonFile[firstLayer][secondLayer][thirdLayer]){
+                            //x : 0 1 2 3 4 5
+                            nb_rows = nb_rows + 1;
+                            htmlContent += "<tr>";
+                            var j = 0;
+                            var tableContents = myJsonFile[firstLayer][secondLayer][thirdLayer][x];
+                            for(y in tableContents){
+                                switch(j){
+                                    case 0:
+                                        htmlContent += "<td width = \"10%\">";
+                                        htmlContent += tableContents[y] + "</td>";
+                                        break;
+                                    case 1:
+                                        htmlContent += "<td width = \"10%\">";
+                                        htmlContent += tableContents[y] + "</td>";
+                                        break;
+                                    case 2:
+                                        htmlContent += "<td width = \"23%\">";
+                                        HUBS = tableContents[y];
+                                        htmlContent += "<ul>";
+                                        var t = 0;
+                                        for(hub in HUBS){
+                                            for(z in HUBS[hub]){
+                                                if(t == 0)htmlContent += "<li><b>" + HUBS[hub][z] + "</b></li>";
+                                                else htmlContent += "<li>" + HUBS[hub][z] + "</li>";
+                                                t++;
+                                            }
+                                        }
+                                        htmlContent += "</ul></td>";
+                                        break;
+                                    case 3:
+                                        htmlContent += "<td width = \"7%\">";
+                                        htmlContent += tableContents[y] + "</td>";
+                                        break;
+                                    case 4:
+                                        htmlContent += "<td width = \"18%\">";
+                                         htmlContent += "<a href='" + Mylink + "'>" + Mylink + "</a></td>";
+                                        break;
+                                    case 5:
+                                        htmlContent += "<td width = \"32%\" style = \"align-content: center;text-align: center\">";
+                                        //htmlContent += "<div style=\"text-align:center\">";
+                                        var Myimage = tableContents[y];
+                                        htmlContent += "<img src='" + Myimage + "' width = '300' height = '180'></td>";
+                                        break;
+                                }
+                                j++;
+                            }
+                            htmlContent += "</tr>";
+                        }
+                    }
+                    i++;
+                }
+            }
+        }
+        //var titles = myObj.getElementsByName("Row");
+        //var companies = jsonDoc.getElementsByTagName("Row");
+        //htmlContent += titles;
+        //htmlContent += root;
+        htmlContent += "</table>";
+        htmlContent += "</body></html>";
+        return htmlContent;
+    }
+        // ....... processing the document goes here  
+</script> 
+</head>
+<style type="text/css">
+    #main_block{
+        text-align: center;
+        margin-top: 160px;
+    }
+    #a2{
+        background-color: #F0F0F0;
+    }
+</style>
+<body>
+	<div id ="main_block">
+        <font><b>Enter URL for Trucking List JSON File</b></font>
+        <br><br>
+        <input id = "input1" type="text" name="URL">
+        <br><br>
+        <input id = "button1" type="button" class="submit" value="Submit Query" onClick="viewJSON()">
+	</div>
+</body>
+</html>

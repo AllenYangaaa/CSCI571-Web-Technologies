@@ -1,0 +1,206 @@
+html {
+    height: 100%;
+}
+body{ 
+    width:1192px;
+    margin:0 auto;
+}
+#address{
+    background-color: white;
+    margin-left: 157px;
+    margin-top: 28px;
+    height: 28px;
+    font-size: 10pt;
+    letter-spacing:1px;
+    color: #404040;
+}
+#itsname{
+    background-color: white;
+    color:#BD9C58;
+    text-align:center;
+    font-size: 40pt;
+    height:110px;
+    letter-spacing:8px;
+}
+#table1{
+    background-color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+#div-a{ 
+    float:left;
+    width:50%;
+    border:0px;
+    background-color: white;
+}
+#image3{
+    margin-top: 123px;
+    margin-left: 132px;
+}
+#div-b{
+    margin-top: 38px;
+    float:right;
+    width:50%;
+    height: 350px;
+    border:0px;
+    background-color: white;
+}
+#div-b1{
+    font-family: Arial;
+    font-size: 10pt;
+    letter-spacing:2px;
+}
+#div-b2{
+    font-family: Libre Baskerville;
+    font-style: italic;
+    color:#BD9C58;
+    font-size: 30pt;
+}
+#div-b3{
+    line-height: 1.4;
+    color: #404040;
+}
+#div-c{ 
+    float:right;
+    width:50%;
+    height: 365px;
+    border:0px;
+    background-color: white;
+}
+#image1{
+    margin-left: 40px;
+}
+#div-d{ 
+    float:left;
+    width:50%;
+    height: 370px;
+    border:0px;
+    background-color: white;
+}
+#image2{
+    margin-top: 46px;
+    margin-left: 132px;
+}
+#div-e{ 
+    float:right;
+    width:50%;
+    height: 470px;
+    border:0px;
+    background-color: white;
+}
+#image4{
+    margin-left: 40px;
+}
+#div-f{ 
+    float:left;
+    width:50%;
+    height: 270px;
+    border:0px;
+    background-color: white;
+}
+#div-f1{
+    font-family: Libre Baskerville;
+    font-style: italic;
+    color:#BD9C58;
+    font-size: 30pt;
+}
+#div-f2{
+    line-height: 1.4;
+    color: #404040;
+}
+#div-g{
+    float: left;
+    width: 100%;
+    height: 670px;
+    border:0px;
+    background-color: white;
+}
+#image7{
+    margin-left: 140px;
+}
+#div-g1{
+    font-family: Arial;
+    font-size: 8pt;
+    letter-spacing:2px;
+}
+#div-g2{
+    font-family: Arial;
+    font-size: 23pt;
+    letter-spacing:2px;
+    color:#606060;
+    text-decoration:none;
+}
+#div-g2:hover{
+    color:#D2D2D2;
+}
+#div-h{
+    width: 390px;
+    height: 140px;
+    background-color: white;
+}
+#div-i{
+    float: left;
+    width:100%;
+    height: 180px;
+    background-color:white;
+}
+#div-i1{
+    font-family: Arial;
+    font-size: 10pt;
+    letter-spacing:2px;
+}
+#div-i2{
+    color:#CC9933;
+    font-size: 20pt;
+    font-family: Libre Baskerville;
+    font-style: italic;
+}
+#div-end1{
+    float: left;
+    width: 98%;
+    height: 500px;
+}
+#div-end2{
+    float: left;
+    width: 98%;
+    height: 215px;
+    background-color:#BD9C58;
+}
+#div-end3{
+    float: left;
+    width: 98%;
+    height: 30px;
+    background-color:white;
+}
+#div-final{
+    font-family: Arial;
+    font-size: 10pt;
+    color: white;
+    line-height: 1;
+}
+.parallel1 {
+    background-image: url("http://cs-server.usc.edu:45678/hw/hw3/images/image6.jpg");
+    height: 650px;
+    opacity: 1;
+    width: 1192px;
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 130% 130%;
+    background-position: -240px 30px; 
+    
+}
+
+.parallel2 {
+    background-image: url("http://cs-server.usc.edu:45678/hw/hw3/images/image5.jpg");
+    height: 100%; 
+    position: relative;
+    opacity: 0.8;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
